@@ -1,0 +1,20 @@
+name: Build, Push, Release
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
+
+jobs:
+  call-workflow:
+    name: Centralized workflow
+    uses: flighttrackr/workflows/.github/workflows/release-with-upstream.yml@main
+    with:
+      hub_repo: flighttrackr
+      hub_image: TPL_PROJECT
+      image_authors: Dennis Neufeld <git@dneufeld.net>
+      image_title: TPL_PROJECT
+      image_description: Dockerized TPL_PROJECT
+      image_licenses: MIT
