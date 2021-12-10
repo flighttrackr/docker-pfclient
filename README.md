@@ -1,8 +1,8 @@
-# TPL_PROJECT
+# Plane Finder Client (pfclient)
 
-[![Release](https://github.com/flighttrackr/docker-TPL_PROJECT/actions/workflows/release.yml/badge.svg)](https://github.com/flighttrackr/docker-TPL_PROJECT/actions/workflows/release.yml)
+[![Release](https://github.com/flighttrackr/docker-pfclient/actions/workflows/release.yml/badge.svg)](https://github.com/flighttrackr/docker-pfclient/actions/workflows/release.yml)
 
-This project makes [TPL_AUTHOR]'s [TPL_PROJECT] software available as a Docker image.
+This project makes [Plane Finder]'s [pfclient] software available as a Docker image.
 
 Due to the API limitations of Docker Hub, we use GitHub as container image registry.
 
@@ -23,16 +23,21 @@ We have other Flighttracking projects, check our [GitHub profile].
 ```shell
 docker run \
   -it --rm \
-  ghcr.io/flighttrackr/TPL_PROJECT:latest
+  ghcr.io/flighttrackr/pfclient:latest
 ```
 
 ## Environment variables
 
 | Environment variable | Default | Description |
 | :- | :- | :- |
-| | | |
+| SHARING_KEY | | Plane Finder sharing key |
+| TCP_HOST | readsb | TCP host (e.g. readsb or dump1090) |
+| TCP_PORT | 30005 | TCP port |
+| CONNECTION_TYPE | 1 | 1 = BEAST |
+| LAT | | Latitude |
+| LON | | Longitude |
 
 
-[TPL_AUTHOR]: https://github.com/TPL_AUTHOR
-[TPL_PROJECT]: https://github.com/TPL_AUTHOR/TPL_PROJECT
+[Plane Finder]: https://planefinder.net/
+[pfclient]: https://planefinder.net/coverage/client
 [GitHub profile]: https://github.com/flighttrackr

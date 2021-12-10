@@ -19,8 +19,8 @@ jobs:
     uses: flighttrackr/workflows/.github/workflows/build-with-upstream.yml@main
     with:
       hub_repo: flighttrackr
-      hub_image: TPL_PROJECT
+      hub_image: pfclient
       image_authors: Dennis Neufeld <git@dneufeld.net>
-      image_title: TPL_PROJECT
-      image_description: Dockerized TPL_PROJECT
+      image_title: pfclient
+      image_description: Dockerized Plane Finder Client (pfclient)
       image_licenses: MIT
