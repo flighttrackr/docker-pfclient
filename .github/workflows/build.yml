@@ -16,7 +16,7 @@ on:
 jobs:
   call-workflow:
     name: Centralized workflow
-    uses: flighttrackr/workflows/.github/workflows/build-with-upstream.yml@main
+    uses: flighttrackr/workflows/.github/workflows/build.yml@main
     with:
       hub_repo: flighttrackr
       hub_image: pfclient

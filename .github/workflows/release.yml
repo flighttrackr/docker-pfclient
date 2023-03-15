@@ -10,7 +10,7 @@ on:
 jobs:
   call-workflow:
     name: Centralized workflow
-    uses: flighttrackr/workflows/.github/workflows/release-with-upstream.yml@main
+    uses: flighttrackr/workflows/.github/workflows/release.yml@main
     with:
       hub_repo: flighttrackr
       hub_image: pfclient
