@@ -1,6 +1,9 @@
 # Builder
 FROM alpine:3.18.5 AS builder
 
+# Install dependencies
+RUN apk add --no-cache wget
+
 # Workdir
 WORKDIR /app
 
@@ -13,7 +16,7 @@ RUN chmod +x /tmp/dl-pfclient.sh && \
 
 
 # Release
-FROM debian:bullseye-slim AS release
+FROM debian:bookworm-slim AS release
 
 # APT
 ARG DEBIAN_FRONTEND="noninteractive"
