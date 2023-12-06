@@ -22,7 +22,7 @@ case `uname -m` in
 esac
 
 # Download file
-wget -T 120 -t 10 -O /tmp/pfclient.tar.gz "$archive_url"
+wget -T 120 -t 10 --prefer-family=IPv6 -O /tmp/pfclient.tar.gz "$archive_url"
 if [ $? -ne 0 ]
 then
     >&2 echo "Download failed"
