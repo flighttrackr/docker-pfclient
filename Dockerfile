@@ -1,5 +1,5 @@
 # Builder
-FROM alpine:3.20.2 AS builder
+FROM alpine:3.20.3 AS builder
 
 # Install dependencies
 RUN apk add --no-cache wget
